@@ -1,0 +1,729 @@
+{% extends 'base.html' %}
+
+{% block styles %}
+
+    <style>
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #05445E;
+            overflow: hidden;
+            width: 100%;
+            height: 0;
+            transition: .5s ease;
+        }
+        .slider-item:hover .overlay {
+            height: 100%;
+        }
+        .overlay-text {
+            color: #75E6DA;
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+    </style>
+
+{% endblock %}
+
+{% load static %}
+
+{% load extras %}
+
+{% block content %}
+
+    {% include 'navbar.html' %}
+
+    <!-- HERO
+    ================================================== -->
+    <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{% static 'assets/img/vitalcen/doctor-one.jpg' %}" alt="..." class="w-100 img-fluid">
+                <div class="carousel-caption d-none d-md-block text-right">
+                    <h1 class="text-white">Proveemos el mejor servicio</h1>
+                    <p>Contamos con medicos altamente capacitados</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'assets/img/vitalcen/doctor-two.jpg' %}" alt="..." class="w-100 img-fluid">
+                <div class="carousel-caption d-none d-md-block text-left" style="top: 100px; bottom: auto">
+                    <h1 style="color: white">Preparados para cuidar tu salud</h1>
+                    <p>El buen médico trata la enfermedad; el gran médico trata al<br/> paciente que tiene la enfermedad</p>
+                </div>
+            </div>
+            {#            <div class="carousel-item">#}
+            {#                <img src="{% static 'assets/img/50.jpg' %}" class="d-block w-100" alt="...">#}
+            {#                <div class="carousel-caption d-none d-md-block">#}
+            {#                    <h2 style="color: white">First slide label</h2>#}
+            {#                    <p>Some representative placeholder content for the first slide.</p>#}
+            {#                </div>#}
+            {#            </div>#}
+        </div>
+    </div>
+
+    <section class="section pt-4 pb-0" style="background-color: #05445E">
+        <!-- Triangles -->
+        <div class="bg-triangle bg-triangle-light bg-triangle-top bg-triangle-left"></div>
+        <div class="bg-triangle bg-triangle-light bg-triangle-bottom bg-triangle-right"></div>
+
+        <!-- Content -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-lg-6">
+
+                    <!-- Heading -->
+                    <h1 class="mb-2 text-white">
+                        Centro Medico <span style="color: #75E6DA">Vitalcen</span>
+                    </h1>
+                    <p class="text-primary mb-0">
+                        Horarios de atencion:
+                    </p>
+                    <p class="mb-1">
+                        <b style="color:red;">*SOLO SE ATENDERA CON PREVIA CITA</b>
+                    </p>
+                    <p class="text-white">
+                        Lunes a Viernes: 9am - 5pm<br/>
+                        Sabados: 9am-3pm
+                    </p>
+
+
+                </div>
+                <div class="col-md-2 col-lg-3 mt-lg-5">
+                    <!-- Icon -->
+                    <div class="text-primary">
+                        <span class="icon icon-marker icon-2x"></span>
+                        <p class="text-white">
+                            Milagro, Olmedo 1024 entre Eloy Alfaro y Vargas Torres
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-2 col-lg-3 mt-lg-5">
+                    <!-- Icon -->
+                    <div class="text-primary mb-4">
+                        <span class="icon icon-support icon-2x"></span>
+                        <p class="text-white">
+                            Citas: <a href="tel:0981267869" style="color: #75E6DA">
+                            098 126 7869
+                        </a><br/>
+                            Call Center: <a href="tel:042970261" style="color: #75E6DA">
+                            (04) 2970261
+                        </a>
+                        </p>
+                    </div>
+                </div>
+            </div> <!-- / .row -->
+        </div>
+    </section>
+
+    <!-- ABOUT
+    ================================================== -->
+    <section class="section bg-light" id="about">
+
+        <!-- Triangles -->
+        <div class="bg-triangle bg-triangle-dark bg-triangle-top bg-triangle-left"></div>
+        <div class="bg-triangle bg-triangle-dark bg-triangle-bottom bg-triangle-right"></div>
+
+        <!-- Content -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-lg-6">
+
+                    <!-- Heading -->
+                    <h2 class="mb-4">
+                        Bienvenidos al <span style="color: #75E6DA">Centro Medico Vitalcen S.A Cemelvit</span>
+                    </h2>
+
+                </div>
+            </div> <!-- / .row -->
+            <div class="row">
+                <div class="col-md-8">
+
+                    <!-- Subheading -->
+                    <p class="text-justify">
+                        Somos una institución privada que surge gracias a la iniciativa del <b>DOCTOR GALO VACA RODRÍGUEZ</b>
+                        quien funda la clínica Santa Inés en el año 1970 fruto a eso decidió formar una segunda torre
+                        de consultorios, abriendo así sus puertas en el año 2013 el <b>CENTRO MÉDICO VITALCEN S.A CEMELVIT</b>
+                        con el objetivo primordial de prestar atención médica a la comunidad de Milagro y a sus alrededores.
+                        Por todo ello no hubiera sido posible sin el esfuerzo, el apoyo de mi familia y colegas
+                        profesionales del sector de la salud, interesados en brindar en la ciudad de Milagro una
+                        alternativa en atención de calidad en salud; además de estimular el bienestar
+                        y el desarrollo humano.
+                    </p>
+
+                </div>
+                <div class="col-md-4">
+
+                    <!-- Blockquote -->
+                    <blockquote class="blockquote border-left">
+                        <p>
+                            Contamos con una amplia lista de médicos especialistas, profesionales destacados
+                            en su área los cuales brindan un excelente servicio al paciente durante su visita.
+                        </p>
+                        <footer class="text-muted">
+                            <div class="avatar avatar mr-3">
+                                <img src='{% static "assets/img/17.jpg" %}' alt="..." class="img-cover rounded-circle">
+                            </div>
+                            Keyleen Gaibor Gallardo, Administración
+                        </footer>
+                    </blockquote>
+
+                </div>
+            </div> <!-- / .row -->
+        </div> <!-- / .container -->
+    </section>
+
+    <!-- GALLERY
+    ================================================== -->
+    <section class="section">
+
+        <!-- Line -->
+        <div class="line line-top"></div>
+
+        <!-- Content -->
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6">
+
+                    <!-- Heading -->
+                    <h2 class="text-center mb-4">
+                        Nuestros Especialistas
+                    </h2>
+
+                    <!-- Subheading -->
+                    <p class="text-center text-muted mb-5">
+                        Dedicados y atentos, nuestros especialistas estarán a su cuidado en todo momento.
+                    </p>
+
+                </div>
+            </div> <!-- / .row -->
+            <div class="row">
+                <div class="col">
+
+                    <!-- Slider -->
+                    <div class="slider slider-no-controls mb-3" data-bind="slider" data-target="#sliderGallerySmall" id="sliderGalleryLarge">
+                        <div class="slider-item">
+
+                            <div class="row m-0">
+                                <div class="col-12 col-md-6 m-0 p-0">
+                                    <!-- Image -->
+                                    <img src='{% static "assets/img/vitalcen/doctors/julio_gomez.jpg" %}' alt="..." class="img-fluid">
+                                </div>
+                                <div class="col-12 col-md-6 mt-2">
+                                    <h4>Dr. Julio Gómez Prieto</h4>
+                                    <blockquote class="blockquote" style="border-left-color: #75E6DA">
+                                        <i class="mb-0">
+                                            "Nuestro objetivo es otorgar soluciones a las enfermedades
+                                            cardiovasculares que afectan a nuestra población."
+                                        </i>
+                                    </blockquote>
+                                    <p class="text-sm">
+                                        Cardiólogo clínico especializado en el hospital universitario
+                                        Fundación Favaloro (Argentina).
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="slider-item">
+
+                            <div class="row m-0">
+                                <div class="col-12 col-md-6 m-0 p-0">
+                                    <!-- Image -->
+                                    <img src='{% static "assets/img/vitalcen/doctors/maria_de_lourdes_vaca.jpg" %}' alt="..." class="img-fluid">
+                                </div>
+                                <div class="col-12 col-md-6 mt-2">
+                                    <h4>Dra. Maria de Lourdes Vaca</h4>
+                                    <blockquote class="blockquote" style="border-left-color: #75E6DA">
+                                        <i class="mb-0">
+                                            "Tomar la decisión de tener un hijo es trascendental.
+                                            Se trata de decidir para siempre que tu corazón va caminando
+                                            por fuera de tú."
+                                        </i>
+                                    </blockquote>
+                                    <p class="text-sm">
+                                        Dra. Maria de Lourdes Vaca Coronel, graduada de la Universidad
+                                        Católica Santiago de Guayaquil, se destaca entre sus colegas
+                                        como doctora en Medicina y Cirugía con más de 15 años de experiencia.
+                                        Especialista en Ginecología y Obstetricia con sub-especialidad en
+                                        Perinatología y Embarazo de Alto riesgo Obstétrico.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="slider-item">
+
+                            <div class="row m-0">
+                                <div class="col-12 col-md-6 m-0 p-0">
+                                    <!-- Image -->
+                                    <img src='{% static "assets/img/vitalcen/doctors/kristel_vaca.jpg" %}' alt="..." class="img-fluid">
+                                </div>
+                                <div class="col-12 col-md-6 mt-2">
+                                    <h4>Dra. Kristel Vaca</h4>
+                                    <blockquote class="blockquote" style="border-left-color: #75E6DA">
+                                        <i class="mb-0">
+                                            "Donde quiera que se ame el arte de la medicina,
+                                            se ama también a la humanidad, y mi objetivo
+                                            es tratar al enfermo y su entorno, no solamente la enfermedad."
+                                        </i>
+                                    </blockquote>
+                                    <p class="text-sm">
+                                        Graduada en Medicina por la Universidad Católica de Santiago de Guayaquil,
+                                        con Postgrado en Pediatría en el hospital Roberto Gilbert Elizalde de la
+                                        Universidad Católica de Santiago de Guayaquil.
+                                        Gracias a la dedicación y profesionalismo que la Dra. Vaca brinda,
+                                        ha asumido cargos como Asesora de lactancia materna para Celacma,
+                                        consejera de alimentación complementaria y
+                                        BLW para Edulacta, y finalmente consejería Beikost para CIENutrition.
+                                    </p>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="slider-item">
+
+                            <div class="row m-0">
+                                <div class="col-12 col-md-6 m-0 p-0">
+                                    <!-- Image -->
+                                    <img src='{% static "assets/img/vitalcen/doctors/paul_santos_ycaza.jpg" %}' alt="..." class="img-fluid">
+                                </div>
+                                <div class="col-12 col-md-6 mt-2">
+                                    <h4>Dr. Paul Santos Ycaza</h4>
+                                    <blockquote class="blockquote" style="border-left-color: #75E6DA">
+                                        <i class="mb-0">
+                                            "Dichoso el que estudia para aprender, el que lo hace para enseñar,
+                                            pero màs el que lo hace para salvar"
+                                        </i>
+                                    </blockquote>
+                                    <p class="text-sm">
+                                        Dr. Paul Santos Ycaza, médico graduado por la Universidad de Guayaquil,
+                                        es especialista en Cirugía General y Laparoscopia. Su especialidad en Cirugía
+                                        Bariátrica y Metabólica proviene de sus estudios realizados
+                                        en São Paulo, Brasil, lo que le ha ayudado a adquirir más de
+                                        12 años de experiencia.
+                                    </p>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="slider-item">
+
+                            <div class="row m-0">
+                                <div class="col-12 col-md-6 m-0 p-0">
+                                    <!-- Image -->
+                                    <img src='{% static "assets/img/vitalcen/doctors/consuelo_mera.png" %}' alt="..." class="img-fluid">
+                                </div>
+                                <div class="col-12 col-md-6 mt-2">
+                                    <h4>Dra. Consuelo Mera</h4>
+                                    <blockquote class="blockquote" style="border-left-color: #75E6DA">
+                                        <i class="mb-0">
+                                            "El arte de nuestra profesión es amar las sonrisas de los demás."
+                                        </i>
+                                    </blockquote>
+                                    <p class="text-sm">
+                                        La Dra. Consuelo Mera, especializada en Odontología General,
+                                        se enfoca en la atención integral para niños y
+                                        adultos, dedicándose a prevenir enfermedades, bacterias, y viruses
+                                        que puedan afectar la salud bucal.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="slider-item">
+
+                            <div class="row m-0">
+                                <div class="col-12 col-md-6 m-0 p-0">
+                                    <!-- Image -->
+                                    <img src='{% static "assets/img/vitalcen/doctors/welky_colamarco.jpg" %}' alt="..." class="img-fluid">
+                                </div>
+                                <div class="col-12 col-md-6 mt-2">
+                                    <h4>Dr. Welky Colamarco</h4>
+                                    <blockquote class="blockquote" style="border-left-color: #75E6DA">
+                                        <i class="mb-0">
+                                            "La prevención es la premisa más importante, indispensable
+                                            e inexorable de la medicina del siglo XXI."
+                                        </i>
+                                    </blockquote>
+                                    <p class="text-sm">
+                                        Graduado de la Universidad de Guayaquil (Alma Master), el Dr. Welky Colamarco
+                                        está en constante evolución y actualización médica en ciencias de la salud.
+                                        Especializado en diabetes mellitus y trastornos músculo - esqueléticos,
+                                        el Dr. Welky Colamarco atiende con dedicación a cada uno de sus pacientes,
+                                        ayudándoles a obtener una excelente calidad de vida y
+                                        tratamientos clínicos de vanguardia.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="slider-item">
+
+                            <div class="row m-0">
+                                <div class="col-12 col-md-6 m-0 p-0">
+                                    <!-- Image -->
+                                    <img
+                                            src='{% static "assets/img/vitalcen/doctors/cindy_castro.jpg" %}'
+                                            alt="..."
+                                            class="img-fluid"
+                                            height="511px"
+                                            width="768px"
+                                    >
+                                </div>
+                                <div class="col-12 col-md-6 mt-2">
+                                    <h4>Lic. Cindy Castro </h4>
+                                    <blockquote class="blockquote" style="border-left-color: #75E6DA">
+                                        <i class="mb-0">
+                                            "El arte de nuestra profesión es amar las sonrisas de los demás."
+                                        </i>
+                                    </blockquote>
+                                    <p class="text-sm">
+                                        Licenciada en Nutrición. La Lic. Cindy Castro estudió nutrición dietética
+                                        y estética en Universidad Católica Santiago de Guayaquil. La prioridad de la
+                                        Lic. Castro es de establecer una rutina dietética que mantenga a sus pacientes
+                                        en una excelente condición física sin necesidad de medicamentos y/o cirugías.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="slider-item">
+
+                            <div class="row m-0">
+                                <div class="col-12 col-md-6 m-0 p-0">
+                                    <!-- Image -->
+                                    <img
+                                            src='{% static "assets/img/vitalcen/vitalcen_logo.png" %}'
+                                            alt="..."
+                                            class="img-fluid"
+                                            height="511px"
+                                            width="768px"
+                                    >
+                                </div>
+                                <div class="col-12 col-md-6 mt-2">
+                                    <h4>Dra. Mirian Gutierrez Saavedra</h4>
+                                    <blockquote class="blockquote" style="border-left-color: #75E6DA">
+                                        <i class="mb-0">
+                                            "Nadie debería sufrir solo y sin apoyo emocional."
+                                        </i>
+                                    </blockquote>
+                                    <p class="text-sm">
+                                        Especializada en el país de Bélgica, la Dra. Mirian Gutierrez Saavedra
+                                        busca mejorar la salud mental de sus pacientes que puedan estar sufriendo de
+                                        depresión, ansiedad, alteración del sueño,
+                                        trastorno bipolar, esquizofrenia, TOC, entre otros.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div> <!-- / .slider -->
+
+                </div>
+            </div> <!-- / .row -->
+            <div class="row">
+                <div class="col">
+
+                    <!-- Slider -->
+                    <div class="slider slider-highlight" data-bind="slider" data-target="#sliderGalleryLarge" id="sliderGallerySmall">
+                        <div class="slider-item col-6 col-md-3">
+                            <!-- Image -->
+                            <img src='{% static "assets/img/vitalcen/logos/cardiology.png" %}' alt="..." class="mx-auto d-block">
+                            <div class="overlay">
+                                <div class="overlay-text">Cardiología</div>
+                            </div>
+
+                        </div>
+                        <div class="slider-item col-6 col-md-3">
+
+                            <!-- Image -->
+                            <img src='{% static "assets/img/vitalcen/logos/obstetrics.png" %}' alt="..." class="mx-auto d-block">
+                            <div class="overlay">
+                                <div class="overlay-text">Ginecología</div>
+                            </div>
+
+                        </div>
+                        <div class="slider-item col-6 col-md-3">
+
+                            <!-- Image -->
+                            <img src='{% static "assets/img/vitalcen/logos/pediatrics.png" %}' alt="..." class="mx-auto d-block">
+                            <div class="overlay">
+                                <div class="overlay-text">Pediatría</div>
+                            </div>
+
+                        </div>
+                        <div class="slider-item col-6 col-md-3">
+
+                            <!-- Image -->
+                            <img src='{% static "assets/img/vitalcen/logos/gastroenterology.png" %}' alt="..." class="mx-auto d-block">
+                            <div class="overlay">
+                                <div class="overlay-text">Cirugía Bariátrica y Metabólica</div>
+                            </div>
+
+                        </div>
+                        <div class="slider-item col-6 col-md-3">
+
+                            <!-- Image -->
+                            <img src='{% static "assets/img/vitalcen/logos/odontology.png" %}' alt="..." class="mx-auto d-block">
+                            <div class="overlay">
+                                <div class="overlay-text">Odontología</div>
+                            </div>
+
+                        </div>
+                        <div class="slider-item col-6 col-md-3">
+
+                            <!-- Image -->
+                            <img src='{% static "assets/img/vitalcen/logos/general_medicine.png" %}' alt="..." class="mx-auto d-block">
+                            <div class="overlay">
+                                <div class="overlay-text">Medicina General</div>
+                            </div>
+
+                        </div>
+                        <div class="slider-item col-6 col-md-3">
+
+                            <!-- Image -->
+                            <img src='{% static "assets/img/vitalcen/logos/nutritionist.png" %}' alt="..." class="mx-auto d-block">
+                            <div class="overlay">
+                                <div class="overlay-text">Nutricionista</div>
+                            </div>
+
+                        </div>
+                        <div class="slider-item col-6 col-md-3">
+
+                            <!-- Image -->
+                            <img src='{% static "assets/img/vitalcen/logos/psychiatry.png" %}' alt="..." class="mx-auto d-block">
+                            <div class="overlay">
+                                <div class="overlay-text">Psiquiatría</div>
+                            </div>
+
+                        </div>
+                    </div> <!-- / .slider -->
+
+                </div>
+            </div>
+        </div> <!-- / .container -->
+
+    </section>
+
+    <!-- FEATURES
+    ================================================== -->
+    <section class="section bg-light">
+        <!-- Pattern -->
+        <div class="bg-triangle bg-triangle-dark bg-triangle-top bg-triangle-left"></div>
+        <div class="bg-triangle bg-triangle-dark bg-triangle-bottom bg-triangle-right"></div>
+        <!-- Content -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-lg-6">
+                    <!-- Heading -->
+                    <h2 class="mb-4 text-primary">
+                        Excelentes en cada detalle
+                    </h2>
+                    <!-- Subheading -->
+                    <p class="text-muted text-left mb-5">
+                        Contamos con una amplia lista de especialidades con profesionales destacados
+                        y prestos a brindar la mejor atención.
+                    </p>
+                </div>
+            </div> <!-- / .row -->
+            <div class="row">
+                <div class="col-md-4">
+                    <!-- Item -->
+                    <div class="mb-5 mb-md-0">
+                        <!-- Icon -->
+                        <div class="mb-4" style="color: #75E6DA">
+                            <span class="icon icon-businessman icon-2x"></span>
+                        </div>
+                        <!-- Heading -->
+                        <h4 class="mb-3" style="color: #05445E">
+                            Profesionales calificados
+                        </h4>
+                        <!-- Content -->
+                        <p class="text-muted mb-0">
+                            Con excelente calidad humana dispuestos a brindar la mejor atención a
+                            todos nuestros pacientes.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <!-- Item -->
+                    <div class="mb-5 mb-md-0">
+                        <!-- Icon -->
+                        <div class="mb-4" style="color: #75E6DA">
+                            <span class="icon icon-building icon-2x"></span>
+                        </div>
+                        <!-- Heading -->
+                        <h4 class="mb-3" style="color: #05445E">
+                            Modernas instalaciones
+                        </h4>
+                        <!-- Content -->
+                        <p class="text-muted mb-0">
+                            Contamos con equipos de alta tecnología para brindarte un servicio rápido y eficiente.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <!-- Item -->
+                    <div>
+                        <!-- Icon -->
+                        <div class="mb-4" style="color: #75E6DA">
+                            <span class="icon icon-devices icon-2x"></span>
+                        </div>
+                        <!-- Heading -->
+                        <h4 class="mb-3" style="color: #05445E">
+                            Excelentes Precio
+                        </h4>
+                        <!-- Content -->
+                        <p class="text-muted mb-0">
+                            Contamos con una variedad de precios con la finalidad de garantizar la
+                            seguridad y satisfacción en la salud de nuestros pacientes.
+                        </p>
+                    </div>
+                </div>
+            </div> <!-- / .row -->
+        </div> <!-- / .container -->
+    </section>
+
+    <!-- GALLERY
+    ================================================== -->
+    <section class="section py-5" style="background-color: #05445E">
+        <!-- Pattern -->
+        <div class="bg-triangle bg-triangle-light bg-triangle-top bg-triangle-left"></div>
+        <div class="bg-triangle bg-triangle-light bg-triangle-bottom bg-triangle-right"></div>
+
+        <!-- Content -->
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-md-8 col-lg-6">
+                    <!-- Heading -->
+                    <h2 class="mb-4 text-primary">
+                        Nuestros Convenios
+                    </h2>
+                </div>
+            </div>
+            <div class="row text-center mb-4">
+                <div class="col-6">
+                    <span class="icon icon-cart icon-2x" style="color: #75E6DA"></span>
+                    <h3 class="text-white">IESS</h3>
+                </div>
+                <div class="col-6">
+                    <span class="icon icon-pool icon-2x" style="color: #75E6DA"></span>
+                    <h3 class="text-white">Vernaza</h3>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-6">
+                    <span class="icon icon-truck icon-2x" style="color: #75E6DA"></span>
+                    <h3 class="text-white">Sanitas</h3>
+                </div>
+                <div class="col-6">
+                    <span class="icon icon-quote icon-2x" style="color: #75E6DA"></span>
+                    <h3 class="text-white">Medilab</h3>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- OFFICES
+    ================================================== -->
+    <section class="section">
+
+        <!-- Content -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2">
+
+                    <!-- Title -->
+                    <h6 class="title" style="color: #05445E">
+                        Nuestras Oficinas
+                    </h6>
+
+                </div>
+                <div class="col-md-10">
+
+                    <!-- Heading -->
+                    <h3 class="mb-4" style="color: #05445E">
+                        LLamenos para agendar una consulta
+                    </h3>
+
+                    <!-- Subheading -->
+                    <p class="text-muted mb-5">
+                        Debido a la pandemia no estamos atendiendo a personas sin tener <b style="color: red">PREVIA CITA</b> agendada.
+                    </p>
+
+                    <!-- Content -->
+                    <div class="row">
+                        <div class="col-md-6 col-lg-5">
+
+                            <!-- Heading -->
+                            <h5 style="color: #75E6DA">
+                                Direccion:
+                            </h5>
+
+                            <!-- Address -->
+                            <p class="text-muted">
+                                Olmedo 1024 entre Eloy Alfaro y Vargas Torres
+                            </p>
+
+                            <!-- Heading -->
+                            <h5 style="color: #75E6DA">
+                                Horarios:
+                            </h5>
+                            <!-- Address -->
+                            <p class="text-muted">
+                                Lunes a Viernes: 9am - 5pm<br/>
+                                Sabados: 9am - 3pm
+                            </p>
+
+                        </div>
+                        <div class="col-md-6 col-lg-5">
+
+                            <!-- Heading -->
+                            <h5 style="color: #75E6DA">
+                                Telefono:
+                            </h5>
+
+                            <!-- Phone -->
+                            <p class="text-muted">
+                                Citas: <a href="tel:0981267869" style="color: #05445E">
+                                098 126 7869
+                            </a><br/>
+                                Call Center: <a href="tel:042970261" style="color: #05445E">
+                                (04) 2970261
+                            </a>
+                            </p>
+
+                            <!-- Heading -->
+                            <h5 style="color: #75E6DA">
+                                Email:
+                            </h5>
+                            <!-- Address -->
+                            <p class="text-muted">
+                                <a href="mailto:centromedico.vitalcen@gmail.com" style="color: #05445E">
+                                    centromedico.vitalcen@gmail.com
+                                </a>
+                            </p>
+
+
+                        </div>
+                    </div>   <!-- / .row -->
+
+                </div>
+            </div> <!-- / .row -->
+        </div> <!-- / .container -->
+
+    </section>
+
+    {% include 'footer.html' with color="#05445E" %}
+
+{% endblock %}

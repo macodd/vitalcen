@@ -1,0 +1,51 @@
+{% load static %}
+
+<!-- NAVBAR
+================================================= -->
+<nav class="navbar navbar-light">
+    <div class="container">
+        <!-- Brand -->
+        <div>
+            <img src="{% static 'assets/img/vitalcen/vitalcen_logo.png' %}" class="navbar-brand-img" alt="..." style="height: 80px">
+        </div>
+        <div class="ml-auto">
+            {% if owner.whatsapp_link %}
+                <!-- Social -->
+                <a href="https://api.whatsapp.com/send?phone={{ owner.whatsapp_link }}" class="mr-4">
+                    <i class="fab fa-whatsapp" style="color: green; font-size: 24px"></i>
+                    <span class="d-none d-md-inline ml-2" style="color: green">
+                    Whatsapp
+                </span>
+                </a>
+            {% endif %}
+
+            {% if owner.facebook_link %}
+                <a href="https://www.facebook.com/{{ owner.facebook_link }}/" class="mr-4">
+                    <i class="fab fa-facebook" style="color: dodgerblue; font-size: 24px"></i>
+                    <span class="d-none d-md-inline ml-2" style="color: dodgerblue">
+                    Facebook
+                </span>
+                </a>
+            {% endif %}
+
+            {% if owner.instagram_link %}
+                <a href="https://www.instagram.com/{{ owner.instagram_link }}/" class="mr-4">
+                    <i class="fab fa-instagram" style="color: mediumpurple; font-size: 24px"></i>
+                    <span class="d-none d-md-inline ml-2" style="color: mediumpurple">
+                    Instagram
+                </span>
+                </a>
+            {% endif %}
+
+            {% if owner.twitter_link %}
+                <!-- Social -->
+                <a href="https://www.twitter.com/={{ owner.twitter_link }}/" class="mr-4">
+                    <i class="fab fa-twitter" style="color: lightblue; font-size: 24px"></i>
+                    <span class="d-none d-md-inline ml-2" style="color: lightblue">
+                    Twitter
+                </span>
+                </a>
+            {% endif %}
+        </div>
+    </div> <!-- / .container -->
+</nav>
